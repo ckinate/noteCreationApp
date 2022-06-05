@@ -1,0 +1,29 @@
+<div class="content d-flex flex-column flex-column-fluid">
+  <div class="card card-custom">
+    <div class="card-body" >
+      <form #CreateForm="ngForm" autocomplete="off" (ngSubmit)=" createNote()">
+        <div class="row align-items-center mb-2">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label class="small mb-1" for="noteTitle">
+                Title of Note
+              </label>
+              <input type="text" class="form-control" name="Title" [(ngModel)]="model.title" />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>
+                Content of Note
+              </label>
+              <input type="text" class="form-control" name="Content" [(ngModel)]="model.content">
+            </div>
+          </div>
+          <div class="col-md-4">
+             <button class="btn btn-primary" type="submit">Create</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
